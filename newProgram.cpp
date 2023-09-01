@@ -1,3 +1,10 @@
+/*
+Autor : MD. Maksudur Rahman.
+@gin_spirit(cf)
+You consider a string of text to be boring if it contains only "a" characters and "b" characters.
+For example, "abbaba" is boring, while "abcccbabc" is not boring. If s is boring, as described above,
+output "YES" (no quotes). Otherwise, output "NO".
+*/
 #include <algorithm>
 #include <bitset>
 #include <complex>
@@ -32,6 +39,7 @@
 #include <vector>
 #include <array>
 #include <atomic>
+#include <climits>
 #include <chrono>
 #include <condition_variable>
 #include <forward_list>
@@ -58,17 +66,25 @@ void fast() {
     ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cin.exceptions(cin.failbit);
 }
+bool number_serach(string line) {
+    for (int index=0; index<line.length(); index++) {
+        if (line[index]!='a' && line[index]!='b') {
+            return false;
+        }
+    }
+    return true;
+}
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
     fast();
-    int n;
-    cin >> n;
-    int p, q, s=0;
-    for (int i=0; i<n; i++) {
-        cin >> p >> q;
-        s+=pow((p-q), 2);
+    string s;
+    cin >> s;
+    if (number_serach(s)) {
+        cout << "YES" << endl;
     }
-    cout << fixed << setprecision(15) << (double)sqrt(s) << endl;
+    else {
+        cout << "NO" << endl;
+    }
 
-    return 0;
+    return (EXIT_SUCCESS);
 }
