@@ -12,23 +12,12 @@ and so on until the array becomes empty.
 #include <type_traits>
 #include <unordered_map>
 #include <unordered_set>
-  
 using namespace std;
-
 typedef long long ll;
 #define input(v) for(auto&& i : v) cin >> i
 #define line(x) getline(cin, x)
-
 #define endl "\n"
-void fast() {
-    ios_base::sync_with_stdio(false);cin.tie(NULL);
-    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    cin.exceptions(cin.failbit);
-}
-string spaceRemove(string &s) {
-    s.erase(remove(s.begin(), s.end(), ' '), s.end());
-    return s;
-}
+
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 
