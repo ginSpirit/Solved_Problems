@@ -18,25 +18,6 @@ typedef long long ll;
 #define rev(x) reverse(x.begin(), x.end())
 #define revArray(x, n) reverse(x, x+n);
 
-
-void fast() {
-    ios_base::sync_with_stdio(false);cin.tie(NULL);
-    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    cin.exceptions(cin.failbit);
-}
-string spaceRemove(string &s) {
-    s.erase(remove(s.begin(), s.end(), ' '), s.end());
-    return s;
-}
-bool goodBad(string s) {
-    for (int i=0; i<s.length(); i++) {
-        if ((s.substr(i, 3)=="101")||(s.substr(i,3)=="010")) {
-            return true;
-            break;
-        }
-    }
-    return false;
-}
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
     string s;
